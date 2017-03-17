@@ -5,7 +5,7 @@
 1. Feynman Writing Prompts - Write out explanations of the following concepts like you are explaining it to a 12 year old.  Doing this will help you quickly discover any holes in your understanding.  Ask your questions on Slack.
 		
 	* Callback Functions
-	* Closure
+	* Closure is the dark lord of the night, wrapping his cape around you
 	* arguments array
 	* recursion
 	* prototype
