@@ -89,23 +89,6 @@ function nFactorial(n) {
   //solve this recursively
   //example:
   //the factorial of 3 is 6 (3 * 2 * 1)
-  // var countup = 1;
-  // var numberArr = [];
-  // var sum;
-
-  // function countIt(){
-  //   if (countup > n){
-  //     sum = numberArr.reduce(function(prev, curr){
-  //       return prev * curr;
-  //     });
-  //   } else if (countup <= n){
-  //     numberArr.push(countup);
-  //     countup++;
-  //     countIt();
-  //   }
-  // }
-
-  // countIt();
   return (n === 0 ? 1 : n * nFactorial(n - 1));
 }
 
