@@ -89,24 +89,24 @@ function nFactorial(n) {
   //solve this recursively
   //example:
   //the factorial of 3 is 6 (3 * 2 * 1)
-  var countup = 1;
-  var numberArr = [];
-  var sum;
+  // var countup = 1;
+  // var numberArr = [];
+  // var sum;
 
-  function countIt(){
-    if (countup > n){
-      sum = numberArr.reduce(function(prev, curr){
-        return prev * curr;
-      });
-    } else if (countup <= n){
-      numberArr.push(countup);
-      countup++;
-      countIt();
-    }
-  }
+  // function countIt(){
+  //   if (countup > n){
+  //     sum = numberArr.reduce(function(prev, curr){
+  //       return prev * curr;
+  //     });
+  //   } else if (countup <= n){
+  //     numberArr.push(countup);
+  //     countup++;
+  //     countIt();
+  //   }
+  // }
 
-  countIt();
-  return sum;
+  // countIt();
+  return (n === 0 ? 1 : n * nFactorial(n - 1));
 }
 
 function cacheFunction(cb) {
@@ -125,18 +125,12 @@ function cacheFunction(cb) {
   // var results = [];
   var cache = {};
 
-  function coolFct(arg){
-    if (cache[arg]){
-      console.log('looked up my cache');
-      return cache[arg];
-    } else {
-      console.log('cache the value');
+  return function(arg){
+    if (!cache.hasOwnProperty(arg)){
       cache[arg] = cb(arg);
-      return cache[arg];
     }
-  }
-
-  return coolFct;
+    return cache[arg];
+  };
 }
 
 
